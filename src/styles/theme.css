@@ -1,0 +1,129 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+  /* Brand colours */
+  --color-orange-500: #ff9f1c;
+  --color-apricot-300: #ffbf69;
+  --color-mint-100: #cbf3f0;
+  --color-teal-500: #2ec4b6;
+
+  /* Text-safe tones */
+  --color-ink-900: #0b2e33;
+  --color-ink-600: #3d5a5e;
+  --color-teal-700: #0f6b66;
+  --color-orange-700: #a85a00;
+  --color-danger-600: #b42318;
+
+  /* Semantic aliases */
+  --color-page: #ffffff;
+  --color-section-alt: var(--color-mint-100);
+  --color-surface: #ffffff;
+  --color-brand: var(--color-orange-500);
+  --color-brand-hover: var(--color-apricot-300);
+  --color-accent: var(--color-teal-500);
+  --color-inverse: var(--color-ink-900);
+  --color-default: var(--color-ink-900);
+  --color-muted: var(--color-ink-600);
+  --color-link: var(--color-teal-700);
+  --color-focus: var(--color-teal-700);
+  --color-subtle: color-mix(in srgb, var(--color-ink-900) 12%, white);
+  --color-on-brand: var(--color-ink-900);
+  --color-on-inverse: #ffffff;
+
+  /* Typography */
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk Variable", var(--font-sans);
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, serif;
+
+  /* Radius & shadow */
+  --radius-card: 0.875rem;
+  --shadow-card: 0 1px 2px rgb(11 46 51 / 0.06), 0 4px 16px rgb(11 46 51 / 0.06);
+}
+
+/* ─── Native CSS custom properties ─── */
+:root {
+  /* Brand primitives (used in SVG, inline styles, non-Tailwind contexts) */
+  --c-orange: #ff9f1c;
+  --c-apricot: #ffbf69;
+  --c-mint: #cbf3f0;
+  --c-teal: #2ec4b6;
+  --c-teal-dark: #0f6b66;
+  --c-ink: #0b2e33;
+  --c-ink-mid: #3d5a5e;
+
+  /* Shared radial gradient backgrounds */
+  --bg-hero: radial-gradient(
+      circle at 18% 35%,
+      rgba(203, 243, 240, 0.45) 0%,
+      rgba(238, 250, 249, 0.22) 45%,
+      rgba(255, 255, 255, 0) 70%
+    ),
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(203, 243, 240, 0.30) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(46, 196, 182, 0.08) 0%,
+      transparent 55%
+    ),
+    #ffffff;
+
+  --bg-section: radial-gradient(
+      ellipse at 88% 78%,
+      rgba(203, 243, 240, 0.32) 0%,
+      rgba(203, 243, 240, 0.10) 38%,
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse at 8% 18%,
+      rgba(46, 196, 182, 0.07) 0%,
+      transparent 52%
+    ),
+    #ffffff;
+
+  --bg-contact: radial-gradient(
+      ellipse at 50% 100%,
+      rgba(203, 243, 240, 0.32) 0%,
+      transparent 58%
+    ),
+    #ffffff;
+}
+
+/* ─── Global base ─── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ffffff;
+  color: #0b2e33;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-teal-dark);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

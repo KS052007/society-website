@@ -1,0 +1,7 @@
+/index.html           /           301
+/pages/events.html    /events     301
+/pages/contact.html   /#contact   301
+/contact              /#contact   301
+/assets/icons/favicon.svg /favicon.svg 301
+/assets/icons/favicon.ico /favicon.ico 301
+/*                    /index.html 200
