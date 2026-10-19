@@ -37,10 +37,3 @@ coverage/
 # Temporary files
 *.tmp
 *.temp
-
-# Markdown files
-*.md
-
-# Agents & Skills
-.agents/
-.agents/skills/

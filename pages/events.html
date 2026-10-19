@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events | Amartya Finance Society</title>
+    <meta
+      name="description"
+      content="Upcoming and previous events by Amartya Finance Society, the official finance society of IITM BS."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/css/main.css" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../public/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="../public/assets/icons/site.webmanifest">
+    <link rel="shortcut icon" href="../public/assets/icons/favicon.ico">
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="terminal-topbar">
+      <div class="left-group">
+        <span class="dot amber"></span>
+        <span class="dot green"></span>
+        <span class="tag" id="route-breadcrumb">Amartya // EVENTS</span>
+      </div>
+      <div class="center-group">
+        <span>AMARTYA FINANCE SOCIETY</span>
+        <span class="divider"></span>
+        <span>IITM BS DEGREE</span>
+      </div>
+      <div class="right-group" id="clock"></div>
+    </header>
+
+    <nav class="page-menu panel" aria-label="Navigation router" data-router data-page="events">
+      <div class="panel-header">Amartya ROUTER</div>
+      <div class="page-menu-row">
+        <span class="menu-prompt">NAV ROUTES ></span>
+
+        <div class="route-stack">
+          <p class="route-tier">MAIN ROUTES</p>
+
+          <a
+            class="page-link route-primary"
+            data-route="home"
+            data-key="1"
+            data-state="LIVE"
+            data-breadcrumb="HOME"
+            data-desc="Mission control for desk updates, live board snapshots, and society-wide routing."
+            href="../index.html"
+          >
+            <span class="route-prefix">&gt;</span><span class="route-index">01</span><span class="route-name">HOME</span><span class="route-badge">LIVE</span>
+          </a>
+          <a
+            class="page-link route-primary active"
+            data-route="events"
+            data-key="2"
+            data-state="LIVE"
+            data-breadcrumb="EVENTS"
+            data-desc="Upcoming market sessions, competitions, and archives across Amartya."
+            href="events.html"
+            aria-current="page"
+          >
+            <span class="route-prefix">&gt;</span><span class="route-index">02</span><span class="route-name">EVENTS</span><span class="route-badge">ACTIVE</span>
+          </a>
+          <a
+            class="page-link route-primary"
+            data-route="contact"
+            data-key="3"
+            data-state="OPEN"
+            data-breadcrumb="CONTACT"
+            data-desc="Partnership, collaboration, and alumni outreach channels for the society."
+            href="contact.html"
+          >
+            <span class="route-prefix">&gt;</span><span class="route-index">05</span><span class="route-name">CONTACT</span><span class="route-badge">OPEN</span>
+          </a>
+        </div>
+
+        <section class="route-context" aria-live="polite">
+          <p class="context-label">ROUTE BRIEF</p>
+          <h3 id="route-context-name">EVENTS</h3>
+          <p id="route-context-desc">Upcoming market sessions, competitions, and archives across Amartya.</p>
+          <p class="context-meta"><span id="route-context-status" class="context-status" data-state="ACTIVE">ACTIVE</span><span id="route-context-key">[2]</span></p>
+        </section>
+
+        <div class="shortcut-legend">
+          <span>[1] HOME</span>
+          <span>[2] EVENTS</span>
+          <span>[3] CONTACT</span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="section-stack">
+      <section class="panel page-hero">
+        <div class="panel-header">WINTER FINANCE BOOTCAMP</div>
+        <h1>Winter Finance Bootcamp</h1>
+        <p>
+          Amartya Finance Society presents the Winter Finance Bootcamp - a comprehensive introduction to finance for IITM BS students.
+        </p>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">BOOTCAMP DETAILS</div>
+        <div style="text-align: center; padding: 2rem;">
+          <img src="../public/assets/images/wfb_hero-section.png" alt="Winter Finance Bootcamp Banner" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 2rem;">
+          
+          <div style="margin-bottom: 2rem;">
+            <a href="https://amartya-iitmbs.github.io/introductory-bootcamp/index.html" target="_blank" class="cta solid" style="display: inline-block; padding: 1rem 2rem; text-decoration: none; font-weight: 600; border: 1px solid var(--terminal-amber); background: var(--terminal-amber); color: #111; letter-spacing: 0.03em;">
+              VIEW SCHEDULE
+            </a>
+          </div>
+          
+          <p style="color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; margin-top: 2rem;">
+            January 2, 2026 - February 5, 2026 | 100% Online
+          </p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">MORE EVENTS COMING SOON</div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--text); line-height: 1.6;">
+            Stay tuned for more exciting events from Amartya Finance Society. We're planning market sessions, 
+            valuation workshops, and industry guest lectures for the upcoming semester.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>AMARTYA FINANCE SOCIETY</span>
+      <span>OFFICIAL FINANCE SOCIETY | IITM BS DEGREE</span>
+      <span>Built with market discipline.</span>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-IN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,34 +8,213 @@
       name="description"
       content="Official finance society of IITM BS. Markets, research, events, and community built with institutional focus."
     />
-    <meta name="theme-color" content="#ff9f1c" />
-
-    <!-- Favicon & Icons -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-    <!-- Editorial Typography: Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Open Graph Default Meta -->
-    <meta property="og:site_name" content="Amartya Finance Society" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Amartya Finance Society | IITM BS" />
-    <meta
-      property="og:description"
-      content="Official finance society of IITM BS. Markets, research, events, and community built with institutional focus."
-    />
-    <meta property="og:image" content="https://amartya.iitmbs.org/og-default.png" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="src/css/main.css" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="public/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="public/assets/icons/site.webmanifest">
+    <link rel="shortcut icon" href="public/assets/icons/favicon.ico">
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="noise"></div>
+    <header class="terminal-topbar">
+      <div class="left-group">
+        <span class="dot amber"></span>
+        <span class="dot green"></span>
+        <span class="tag" id="route-breadcrumb">Amartya // HOME</span>
+      </div>
+      <div class="center-group">
+        <span>AMARTYA FINANCE SOCIETY</span>
+        <span class="divider"></span>
+        <span>IITM BS DEGREE</span>
+      </div>
+      <div class="right-group" id="clock"></div>
+    </header>
+
+    <nav class="page-menu panel" aria-label="Navigation router" data-router data-page="home">
+      <div class="panel-header">Amartya ROUTER</div>
+      <div class="page-menu-row">
+        <span class="menu-prompt">NAV ROUTES ></span>
+
+        <div class="route-stack">
+          <p class="route-tier">MAIN ROUTES</p>
+
+          <a
+            class="page-link route-primary active"
+            data-route="home"
+            data-key="1"
+            data-state="LIVE"
+            data-breadcrumb="HOME"
+            data-desc="Mission control for desk updates, live board snapshots, and society-wide routing."
+            href="index.html"
+            aria-current="page"
+          >
+            <span class="route-prefix">&gt;</span><span class="route-index">01</span><span class="route-name">HOME</span><span class="route-badge">ACTIVE</span>
+          </a>
+          <a
+            class="page-link route-primary"
+            data-route="events"
+            data-key="2"
+            data-state="LIVE"
+            data-breadcrumb="EVENTS"
+            data-desc="Upcoming market sessions, competitions, and archives across Amartya."
+            href="pages/events.html"
+          >
+            <span class="route-prefix">&gt;</span><span class="route-index">02</span><span class="route-name">EVENTS</span><span class="route-badge">LIVE</span>
+          </a>
+          <a
+            class="page-link route-primary"
+            data-route="contact"
+            data-key="3"
+            data-state="OPEN"
+            data-breadcrumb="CONTACT"
+            data-desc="Partnership, collaboration, and alumni outreach channels for the society."
+            href="pages/contact.html"
+          >
+            <span class="route-prefix">&gt;</span><span class="route-index">04</span><span class="route-name">CONTACT</span><span class="route-badge">OPEN</span>
+          </a>
+        </div>
+
+        <section class="route-context" aria-live="polite">
+          <p class="context-label">ROUTE BRIEF</p>
+          <h3 id="route-context-name">HOME</h3>
+          <p id="route-context-desc">Mission control for desk updates, live board snapshots, and society-wide routing.</p>
+          <p class="context-meta"><span id="route-context-status" class="context-status" data-state="ACTIVE">ACTIVE</span><span id="route-context-key">[1]</span></p>
+        </section>
+
+        <div class="shortcut-legend">
+          <span>[1] HOME</span>
+          <span>[2] EVENTS</span>
+          <span>[3] CONTACT</span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero-grid">
+        <section class="panel headline-panel">
+          <div class="panel-header">TERMINAL HEADLINE</div>
+          <div class="headline-content">
+            <p class="blinker">> OFFICIAL FINANCE SOCIETY OF IITM BS</p>
+            <h1>Amartya Finance Society</h1>
+            <p class="subhead">
+              Building market literacy, research rigor, and real-world finance skills
+              through a high-conviction student network.
+            </p>
+            <div class="cta-row">
+              <a href="pages/contact.html" class="cta solid">Contact Us</a>
+              <a href="pages/events.html" class="cta ghost">Explore Events</a>
+            </div>
+          </div>
+        </section>
+
+        <aside class="panel stats-panel">
+          <div class="panel-header">KEY STATS</div>
+          <div class="metric">
+            <span>Active Members</span>
+            <strong>260+</strong>
+          </div>
+          <div class="metric">
+            <span>Bootcamp Cohorts</span>
+            <strong>12</strong>
+          </div>
+          <div class="metric">
+            <span>Case Studies Completed</span>
+            <strong>10+</strong>
+          </div>
+          <div class="metric">
+            <span>Student Projects</span>
+            <strong>85+</strong>
+          </div>
+        </aside>
+      </section>
+
+      
+      <section id="about" class="panel">
+        <div class="panel-header">ABOUT AMARTYA</div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--text); line-height: 1.6; margin-bottom: 1.5rem;">
+            A student-led finance society focused on fostering financial thinking, analytical skills, and real-world market understanding across the IIT Madras BS Degree. Amartya connects like-minded learners interested in finance, economics, data, and decision-making.
+          </p>
+        </div>
+      </section>
+
+      <section id="mission" class="panel">
+        <div class="panel-header">OUR MISSION</div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--text); line-height: 1.6; margin-bottom: 1.5rem;">
+            To build a strong finance culture within the IIT Madras BS Degree by enabling students to learn, apply, and discuss finance through research, events, and collaborative initiatives.
+          </p>
+          <p style="color: var(--text); line-height: 1.6;">
+            We aim to bridge academic concepts with practical financial thinking while creating a community of students curious about markets, investing, policy, and quantitative analysis.
+          </p>
+        </div>
+      </section>
+
+      <section id="what-we-do" class="panel">
+        <div class="panel-header">WHAT WE DO</div>
+        <div style="padding: 1.5rem;">
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: var(--terminal-amber); font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; margin-bottom: 1rem;">Research & Analysis</h3>
+            <p style="color: var(--text); line-height: 1.6;">
+              We promote structured financial research through reports, thesis-level reviews, and data-driven analysis across markets, firms, and economic themes.
+            </p>
+          </div>
+          
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: var(--terminal-amber); font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; margin-bottom: 1rem;">Learning & Skill Building</h3>
+            <p style="color: var(--text); line-height: 1.6;">
+              Through workshops, bootcamps, and peer-led sessions, we help students develop practical skills in finance, valuation, analytics, and financial reasoning.
+            </p>
+          </div>
+          
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: var(--terminal-amber); font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; margin-bottom: 1rem;">Events & Competitions</h3>
+            <p style="color: var(--text); line-height: 1.6;">
+              We organize finance-focused events including case competitions, speaker sessions, and collaborative challenges to encourage applied learning.
+            </p>
+          </div>
+          
+          <div>
+            <h3 style="color: var(--terminal-amber); font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; margin-bottom: 1rem;">Community & Collaboration</h3>
+            <p style="color: var(--text); line-height: 1.6;">
+              Amartya serves as a platform for students across the BS Degree to connect, discuss ideas, and grow together around a shared interest in finance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="who-its-for" class="panel">
+        <div class="panel-header">WHO IT'S FOR</div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--text); line-height: 1.6; margin-bottom: 1.5rem;">
+            Amartya is for students who are:
+          </p>
+          <ul style="color: var(--text); line-height: 1.6; padding-left: 1.5rem;">
+            <li style="margin-bottom: 0.8rem;">Curious about finance, markets, and economics</li>
+            <li style="margin-bottom: 0.8rem;">Interested in applying data and analytics to financial problems</li>
+            <li style="margin-bottom: 0.8rem;">Looking to collaborate with peers who think analytically</li>
+            <li style="margin-bottom: 0.8rem;">Exploring careers or deeper learning in finance and related fields</li>
+            <li>No prior finance background also works - curiosity and commitment matter more.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="terminal-footer">
+      <span>AMARTYA FINANCE SOCIETY</span>
+      <span>OFFICIAL FINANCE SOCIETY | IITM BS DEGREE</span>
+      <span>Built with market discipline.</span>
+    </footer>
+
+    <script src="src/js/main.js"></script>
   </body>
 </html>
