@@ -1,0 +1,2 @@
+-- Supabase seed SQL (Phase 4: Dashboard implementation)
+-- Placeholder file to establish repository layout per context.md §10

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /articles
+Disallow: /resources
+
+Sitemap: https://amartya.iitmbs.org/sitemap.xml
